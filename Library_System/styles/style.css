@@ -1,0 +1,218 @@
+* {
+    padding: 0px;
+    margin: 0px;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  nav ul {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 3px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  a.active,a:hover{
+    background: #B8C0C2;
+    transition: .5s;
+  }
+
+  .box {
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: flex;
+    border-radius: 2px;
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 450px 800px 100px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    /* background: linear-gradient(109.6deg, rgb(255, 194, 48) 11.2%, rgb(255, 124, 0) 100.2%); */
+    color: white;
+    border-bottom: 1px solid black;
+    background-color: whitesmoke;
+
+  }
+
+
+  
+  .div2 {
+    padding-top: 20px;
+    grid-area: 2 / 1 / 3 / 2;
+    /* background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); */
+    overflow: auto;
+    display: flex;
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    column-gap: 20px;
+    row-gap: 20px;
+    background-color: white;
+  }
+
+  .div3 {
+    grid-area: 3 / 1 / 4 / 2;
+    /* background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); */
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(255, 247, 247);
+  }
+
+  .div4 {
+    grid-area: 4 / 1 / 5 / 2;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  }
+
+  .image{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+  }
+
+  .account{
+    display: none;
+    background-color: red;
+    height: 60px;
+    position: absolute;
+    width: 60px;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+  }
+
+  @media (max-width:700px) {
+
+    .div1 nav{
+      display: none;
+    }
+
+    .div1 .logo{
+      display: block;
+    }
+
+    .account{
+      display: block;
+    }
+
+    
+  }
+
+  @media (min-width:700px){
+    #links {
+      display: none;
+      
+    }
+
+    #links ul{
+      display: none;
+      background-color: none;
+    }
+
+    #links ul li {
+      display: none;
+      background-color: none;
+    }
+    #links ul li a {
+      display: none;
+      background-color: none;
+    }
+   
+  }
+
+  /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+scrollbar-width: thin;
+scrollbar-color: #397524 #FFFFFF;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+height: 0px;
+width: 0px;
+}
+*::-webkit-scrollbar-track {
+border-radius: 0px;
+background-color: #FFFFFF;
+}
+
+*::-webkit-scrollbar-track:hover {
+background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+border-radius: 5px;
+background-color: #397524;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+background-color: #62A34B;
+}
+
+*::-webkit-scrollbar-thumb:active {
+background-color: #62A34B;
+}
+
+.logo{
+border-radius: 5px;
+position:relative;
+left:10px;
+display:none;
+z-index: 10;
+top: 10px;
+
+}
+
+#links{
+/* z-index: 10; */
+position: absolute;
+top: 90px;
+right: 0px;
+background-color: white;
+color: white;
+padding: 10px;
+display: none;
+
+}
+
+#links ul li {
+margin-top: 20px;
+margin-bottom: 20px;
+}
